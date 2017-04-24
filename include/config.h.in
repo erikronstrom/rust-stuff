@@ -1,0 +1,20 @@
+
+#ifndef _CONFIG_H
+#define _CONFIG_H
+
+#cmakedefine GA_VERSION @GA_VERSION@
+#cmakedefine GA_FLUIDSYNTH 1
+#cmakedefine GA_OGG_VORBIS 1
+#cmakedefine GA_AUDIO_UNIT 1
+#cmakedefine GA_VST 1
+#cmakedefine GA_MP3_IMPORT 1
+
+#cmakedefine MACOSX 1
+#cmakedefine WINDOWS 1
+
+#cmakedefine HAVE_STRDUP 1
+
+#define CACHELINE_SIZE 64
+
+#endif // _CONFIG_H
+
