@@ -1,5 +1,8 @@
 # GAUDEAMUS
 
+Audio engine written in C11.
+
+An attempt to make a successor of faudio.
 
 ## Building
 
