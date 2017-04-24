@@ -1,4 +1,4 @@
-# GAUDEAMUS
+# GAUDIAMUS
 
 Audio engine written in C11.
 
