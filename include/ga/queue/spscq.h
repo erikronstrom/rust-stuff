@@ -115,6 +115,6 @@ void* ga_spscq_pop(ga_spscq *queue);
 void* ga_spscq_peek(ga_spscq *queue);
 // void ga_spscq_clear(ga_spscq *queue);
 
-void debug_spscq(ga_spscq *queue);
+void debug_spscq(const ga_spscq *queue);
 
 #endif

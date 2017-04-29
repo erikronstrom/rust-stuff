@@ -27,9 +27,9 @@ char *strdup(const char *s);
 char *ga_sprintf(const char *, ...) __attribute__((format(printf,1,2)));
 
 #if GA_DEBUG
-void _fatal_error(const char *msg, const char *func, const char *file, int line);
+void _fatal_error(const char *msg, const char *func, const char *file, int line) __attribute__((noreturn));
 #else
-void _fatal_error(const char *msg, const char *func);
+void _fatal_error(const char *msg, const char *func) __attribute__((noreturn));
 #endif
 
 #endif

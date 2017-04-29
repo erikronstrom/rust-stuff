@@ -51,9 +51,9 @@ size_t ga_spscq_can_push(ga_spscq *queue)
     return queue->size - atomic_load_explicit(&queue->count, memory_order_acquire);
 }
 
-size_t ga_spscq_can_pop(ga_spscq *spscq)
+size_t ga_spscq_can_pop(ga_spscq *queue)
 {
-    return atomic_load_explicit(&spscq->count, memory_order_acquire);
+    return atomic_load_explicit(&queue->count, memory_order_acquire);
 }
 
 bool ga_spscq_push(ga_spscq *queue, void *value)
@@ -111,7 +111,7 @@ static char* char_repeat(int n, char c) {
   return dest;
 }
 
-void debug_spscq(ga_spscq *queue)
+void debug_spscq(const ga_spscq *queue)
 {
     printf("Q: ");
     for (int i = 0; i < queue->size; i++) {

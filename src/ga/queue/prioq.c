@@ -109,7 +109,7 @@ void ga_prioq_push(ga_prioq *queue, void *value)
     queue->root = recursive_merge(queue->root, new_node(queue, value, NULL, NULL), queue->cmpfn);
 }
 
-void* ga_prioq_peek(ga_prioq *queue)
+void* ga_prioq_peek(const ga_prioq *queue)
 {
     qnode *root = queue->root;
     return root ? root->value : NULL;

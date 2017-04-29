@@ -68,7 +68,7 @@ void ga_prioq_preallocate(ga_prioq *queue, unsigned int count);
 
 void ga_prioq_push(ga_prioq *queue, void *value);
 void* ga_prioq_pop(ga_prioq *queue);
-void* ga_prioq_peek(ga_prioq *queue);
+void* ga_prioq_peek(const ga_prioq *queue);
 // void ga_prioq_clear(ga_prioq *queue);
 
 void debug_prioq(ga_prioq *squeue);
